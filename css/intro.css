@@ -1,0 +1,44 @@
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 80vh;
+  min-height: auto;
+
+  .headline {
+    font-size: 6.5934065934vw;
+    font-weight: 300;
+    line-height: 96%;
+    /* opacity: 0; */
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &.animated {
+    opacity: 0;
+    height: 100vh;
+    animation-name: intro-reveal;
+    animation-duration: 2s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+  }
+}
+
+@keyframes intro-reveal {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    height: 100vh;
+  }
+  to {
+    opacity: 1;
+    min-height: auto;
+    height: 80vh;
+  }
+}

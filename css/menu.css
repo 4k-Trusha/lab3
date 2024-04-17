@@ -1,0 +1,33 @@
+.menu {
+  align-self: center;
+
+  ul {
+    display: flex;
+    gap: 1em;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    position: relative;
+
+    height: 2.3351648352vw;
+    padding: 0 1.0989010989vw;
+
+    font-size: 0.9157509158vw;
+    text-transform: capitalize;
+    border-radius: 9999em;
+
+    transition: box-shadow 0.4s cubic-bezier(0.52, 0.24, 0.08, 1);
+    will-change: box-shadow;
+
+    color: #fff;
+
+    &:hover {
+      box-shadow: inset 0 0 0 1px #fff;
+    }
+  }
+}

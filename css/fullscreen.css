@@ -1,0 +1,161 @@
+:root {
+  --swiper-theme-color: #fff;
+}
+
+.fullscreen {
+  position: relative;
+  height: 100vh;
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .autoplay-progress {
+    position: absolute;
+    right: 3.2967032967vw;
+    bottom: 2.2967032967vw;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--swiper-theme-color);
+  }
+
+  .autoplay-progress svg {
+    --progress: 0;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    stroke-width: 4px;
+    stroke: var(--swiper-theme-color);
+    fill: none;
+    stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
+  }
+
+  .swiper-slide {
+    width: 45.0549450549vw;
+
+    .slide__image {
+      height: 100%;
+
+      img,
+      video {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .slide__title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+
+      font-size: 6.5934065934vw;
+      font-weight: 300;
+      line-height: 96%;
+      text-align: center;
+
+      color: #fff;
+
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: rgba(0, 0, 0, 0.44);
+      /* https://css-tricks.com/almanac/properties/t/text-stroke/*/
+    }
+  }
+
+  .slider__controls {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: 0.641025641vw;
+
+    position: absolute;
+    left: 3.2967032967vw;
+    bottom: 2.2967032967vw;
+    z-index: 10;
+
+    .slider__numbers {
+      align-items: center;
+      display: flex;
+
+      margin-bottom: 1.4652014652vw;
+
+      color: #fff;
+
+      .swiper-pagination-current {
+        display: block;
+        padding-right: 1em;
+      }
+      .swiper-pagination-total {
+        display: block;
+        padding-left: 1em;
+      }
+    }
+
+    .slider__arrows {
+      display: flex;
+
+      .slider__arrow {
+        align-items: center;
+        border-radius: 9999em;
+        box-shadow: inset 0 0 0 2px #fff;
+        display: flex;
+        height: 1.6483516484vw;
+        justify-content: center;
+        margin-right: 0.9157509158vw;
+        -webkit-mask-image: -webkit-radial-gradient(#fff, #000);
+        overflow: hidden;
+        position: relative;
+        width: 3.1135531136vw;
+
+        &:hover div {
+          transform: scaleY(1);
+          transform-origin: 0 bottom;
+        }
+
+        div {
+          background: #fff;
+          bottom: 0;
+          height: 100%;
+          left: 0;
+          position: absolute;
+          right: 0;
+          transform: scaleY(0);
+          transform-origin: 0 0;
+          transition: transform 0.3s cubic-bezier(0.52, 0.24, 0.08, 1);
+          will-change: transform;
+        }
+
+        &.slider__arrow--prev svg,
+        &.slider__arrow--prev img {
+          transform: rotate(180deg);
+        }
+
+        svg,
+        img {
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+          display: block;
+          height: auto;
+          mix-blend-mode: difference;
+          position: relative;
+          transform-origin: center;
+          width: 1.7399267399vw;
+        }
+      }
+    }
+  }
+}

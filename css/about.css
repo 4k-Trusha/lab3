@@ -1,0 +1,33 @@
+.about {
+  position: relative;
+  background-color: #fff;
+
+  overflow: hidden;
+
+  p {
+    max-width: 64.4688644689vw;
+    padding-bottom: 23.0769230769vw;
+    padding-top: 2.5641025641vw;
+
+    font-size: 2.1978021978vw;
+    font-weight: 300;
+    line-height: 120%;
+  }
+
+  iframe {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    height: auto;
+  }
+
+  .vimeo {
+    display: none;
+  }
+
+  .youtube {
+    margin-top: -60px;
+    pointer-events: none;
+
+    display: none;
+  }
+}

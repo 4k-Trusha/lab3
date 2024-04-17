@@ -1,0 +1,54 @@
+.clients {
+  color: #000;
+  background-color: #fff;
+
+  padding-top: 3.4798534799vw;
+  padding-bottom: 18.956043956vw;
+
+  .headline {
+    font-size: 0.8241758242vw;
+    font-weight: 300;
+    letter-spacing: 0.04em;
+    line-height: 100%;
+    text-transform: uppercase;
+
+    margin-bottom: 1.8315018315vw;
+  }
+
+  .content_wrapper {
+    width: 70%;
+    animation-name: clientsFx;
+    animation-duration: 0.8s;
+    animation-delay: 0.4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+  }
+
+  .clients__list {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 6.043956044vw;
+    font-weight: 300;
+    letter-spacing: -0.01em;
+    line-height: 100%;
+    text-transform: uppercase;
+
+    &:last-child {
+      justify-content: flex-start;
+
+      > :last-child {
+        margin-left: 14.9725274725vw;
+      }
+    }
+  }
+}
+
+@keyframes clientsFx {
+  0% {
+    width: 70%;
+  }
+  100% {
+    width: 100%;
+  }
+}
